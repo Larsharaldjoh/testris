@@ -1,0 +1,6 @@
+C:\dev\testris\testris\bin\Debug\testris.exe.config
+C:\dev\testris\testris\bin\Debug\testris.exe
+C:\dev\testris\testris\bin\Debug\testris.pdb
+C:\dev\testris\testris\obj\Debug\testris.csprojResolveAssemblyReference.cache
+C:\dev\testris\testris\obj\Debug\testris.exe
+C:\dev\testris\testris\obj\Debug\testris.pdb
