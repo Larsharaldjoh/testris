@@ -1,0 +1,5 @@
+C:\dev\Testris\testris\bin\Release\testris.exe.config
+C:\dev\Testris\testris\bin\Release\testris.exe
+C:\dev\Testris\testris\bin\Release\testris.pdb
+C:\dev\Testris\testris\obj\Release\testris.exe
+C:\dev\Testris\testris\obj\Release\testris.pdb
