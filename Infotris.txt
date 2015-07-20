@@ -1,0 +1,55 @@
+
+cd c:\dev\learntris c:\python34\python.exe testris.py c:\dev\testris\testris\bin\debug\testris.exe
+
+
+// *** Reset Input and Output loop ***
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+m m m m m m m m m m
+b b b b b b b b b b
+c c c c c c c c c c
+g g g g g g g g g g
+y y y y y y y y y y
+o o o o o o o o o o
+r r r r r r r r r r
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+c . . . . . . . . .
+c . . . . . . . . .
+c . . . . g . . . .
+c . . o . g g . . .
+. . . o . b g . . .
+. m r r o o b y y .
+m m m r r b b y y .
+
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+m c r g b y m c o b
+. . . . . . . . . .
+. . . . . . . . . .
+m y o . c r g c m y
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+
+. . . .
+c c c c
+. . . .
+. . . .

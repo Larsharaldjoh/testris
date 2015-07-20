@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace testris
 {
-    class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
@@ -22,6 +22,9 @@ namespace testris
             string Y = "y ";
             string dot = ". ";
 
+            string[,] clearTetra = new string[,] {{dot, dot, dot},
+                                                {dot, dot, dot},
+                                                {dot, dot, dot}};
             string[,] cyanI = new string[,] {{dot, dot, dot, dot},
                                             {C, C, C, C},
                                             {dot, dot, dot, dot},
@@ -104,12 +107,10 @@ namespace testris
             while (true)
             {
                 // ********** Input ****************
-                if ((inputCommand != "q") && (inputCommand != "p") && (inputCommand != "g")
-                    && (inputCommand != "c") && (inputCommand != "?n") && (inputCommand != "s")
-                    && (inputCommand != "l") && (inputCommand != "t"))
-                {
+                //if (noInput(inputCommand))
+                //{
                     inputCommand = Console.ReadLine();
-                }
+                //}
 
                 // ***************** Logic ******************
                 #region p
@@ -218,7 +219,6 @@ namespace testris
                             row++;
                         }
                         givenMatrix.RemoveRange(0,22);
-                        outputMatrix = false;
                         }
 
 
@@ -310,13 +310,14 @@ namespace testris
                         outputCurrent(activeTetra, activeRow, activeCollumnLength);
                         activeRow++;
                     }
+                    activeRow = 0;
                     // -----------------
                     inputCommand = Reset(inputCommand);
                 }
                 else if (inputCommand == "c")
                 {   
-                    Clear(arr1, dot, rowLength, colLength);
-                    Clear(activeTetra, dot, 4, 4);
+                    Clear(arr1, dot, rowLength, colLength, false);
+                    Clear(activeTetra, dot, activeRowLength, activeCollumnLength, true);
 
                     // -----------------
                     inputCommand = Reset(inputCommand);
@@ -345,17 +346,33 @@ namespace testris
             return c;
         }
 
-        public static void Clear(string[,] array, string d, int row, int col)
+        public static void Clear(string[,] array, string s, int row, int col, bool b)
         {
             // ********* Clear Matrix ********************
-
-            for (int cr = 0; cr < row; cr++)
-            {   // Loops through all rows
-                for (int cc = 0; cc < col; cc++)
-                {   // Loops through all collumns and clears them
-                    array[cr, cc] = d;
+            if (!b)
+                for (int cr = 0; cr < row; cr++)
+                {   // Loops through all rows
+                    for (int cc = 0; cc < col; cc++)
+                    {   // Loops through all collumns and clears them
+                        array[cr, cc] = s;
+                    }
                 }
+            else
+            {
+                array = new string[,]{{". " , ". ", ". "},
+                                    {". " , ". ", ". "},
+                                    {". " , ". ", ". "}};
             }
+        }
+
+        public static bool noInput(string s)
+        {
+            bool b = false;
+            if (       (s != "q") && (s != "p") && (s != "g")
+                    && (s != "c") && (s != "?n") && (s != "s")
+                    && (s != "l") && (s != "t"))
+                    b = true;
+            return b;
         }
 
         public static int outputCurrent(string[,] array, int i, int n2)
